@@ -9,6 +9,6 @@ The domain is created to reach the maximum number of allowed characters (253) wi
 
 These are some bash snippets I used to generate the URL and the contents:
 
-`seq 26 | awk 'BEGIN { printf "http://" }; { n = int(1 + 62 * (41/29)^($1-26)); c = sprintf("%c",0x61 + $1-1); for(i=1;i<=n;i++) printf c; printf "."; }; END { printf "me\n"; }'`
+`seq 26 | awk 'BEGIN { printf "http://" }; { n = int(1 + 62 * (10/7)^($1-26)); c = sprintf("%c",0x61 + $1-1); for(i=1;i<=n;i++) printf c; printf "."; }; END { printf "me\n"; }'`
 
 `seq 26 | awk 'BEGIN { printf "<h1>" }; { printf "<i>"; n = int(1 + 62 * (10/7)^($1-26)); c = sprintf("%c",0x61 + $1-1); printf n c; printf "</i> "; }; END { printf "</h1>"; }'`
